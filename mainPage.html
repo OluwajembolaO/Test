@@ -1,0 +1,82 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Homepage</title>
+    <link href="./cssStyles/indexstyle.css" rel="stylesheet" type="text/css">
+    <link href="./cssStyles/globalstyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <script src="script.js"></script>
+    <img class = "logo" src = "./ImageFolder/mental-bunnies-high-resolution-logo-color-on-transparent-background.png">
+    <h1 class = "logo2"> Mental Bunnies </h1>
+    <div class="div-2">
+    <button class="btn" onclick="myFunction()"><i class="fa fa-bars"></i></button>
+    <div id="child-div2" style="visibility:hidden">
+  <table id="menuTable2">
+    <tbody><tr>
+    </tr><tr>
+      <tr><th>
+        <div class="divTOC"><h3 class = "TOC">Table Of Contents</h3></div>
+      </th></tr>
+      <tr><th>
+      </th></tr>
+      <tr><th>
+      </th></tr>
+      <tr><th>
+      </th></tr>
+     <div class = "Pos"> <th class = "otherWebpages">
+       <a href="plants.html">About Mental Health
+       </a>
+      </th></div>
+    </tr>
+     <tr>
+      <th class = "otherWebpages">
+       <a href="animals.html">Nil</a>
+      </th>
+    </tr>
+     <tr>
+      <th class = "otherWebpages">
+       <a href="biomes.html">Nil</a>
+      </th>
+    </tr>
+     <tr>
+      <th class = "otherWebpages">
+       <a href="media.html">Nil</a>
+      </th>
+    </tr>
+     <tr>
+      <th class = "otherWebpages">
+       <a href="awareness.html">Nil</a>
+      </th>
+    </tr>
+     <tr>
+      <th class = "otherWebpages">
+       <a href="facts.html">Nil</a>
+      </th>
+    </tr>
+    
+  </tbody></table></div>
+  </div>
+    <script>
+  function myFunction() {
+    var x = document.getElementById('menuTable2');
+    var y = document. getElementById('child-div2')
+    if (x.style.visibility === 'hidden') {
+      x.style.visibility = 'visible';
+      y.style.visibility = 'visible';
+    } else {
+      x.style.visibility = 'hidden';
+      y.style.visibility = 'hidden';
+    }
+  }
+  </script>
+  
+  
+  
+    
+  
+  
+  </body></html>
