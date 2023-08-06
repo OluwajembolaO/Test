@@ -1,0 +1,67 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Homepage</title>
+    <link href="{{ url_for('static', filename = 'css/indexstyle.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename = 'css/globalstyle.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <script src="script.js"></script>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="logo">
+          <img id = "IMAGE" src = "{{ url_for('static', filename = 'images/mental-bunnies-high-resolution-logo-color-on-transparent-background.png')}}">
+          <a class = "realogo" href="#">Mental Bunnies</a>
+        </div>
+       
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+          <li><a href="{{ url_for('chatBot') }}">ChatBot</a></li>
+          {% if session.username %}
+          <li id = "user">{{ session.username }}</li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        {% else %}
+          <button><a href="{{ url_for('signIn') }}">Sign In</a></button>
+          <button><a href="{{ url_for('signUp') }}">Sign Up</a></button>
+          <button><a href="{{ url_for('logout') }}">Log Out</a></buttton>
+        {% endif %}
+        </ul>
+      </div>
+    </nav>
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Learn About Mental Health</a>
+  <a href="#">Services</a>
+  <a href ="#">Partnerships</a>
+  <a href="#">Testomonies</a>
+</div>
+
+<span class = "sideBar" onclick="openNav()"><div class ="sideMenu"><i class="fa fa-angle-right"></i></div> </span>
+
+
+<div id = "main">
+  <div id = "mainImg">
+  <img src = "{{ url_for('static', filename = 'images/mental-bunnies-high-resolution-logo-color-on-transparent-background.png')}}" style = "width:500px">
+  </div>
+  <div id = "mainCatchPhrase"><h1 class = "mainCatchPhrase">Hopping Towards Mental Wellness!</h1>
+</div>
+</div>
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.body.style.backgroundColor = "grey";
+    document.getElementsByClassName("navBar").style.backgroundColor = "grey";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.body.style.backgroundColor = "white";
+  }   document.getElementsByClassName("navBar").style.backgroundColor = "white";
+  </script>
+  </body></html>

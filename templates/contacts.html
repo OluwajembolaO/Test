@@ -1,0 +1,62 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Homepage</title>
+  <link href="./cssStyles/contactstyle.css" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static', filename = 'css/globalstyle.css')}}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo">
+        <img id = "IMAGE" src = "ImageFolder/mental-bunnies-high-resolution-logo-color-on-transparent-background.png">
+        <a class = "realogo" href="#">Mental Bunnies</a>
+      </div>
+     
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <button><a href="{{ url_for('signIn') }}">Sign In</a></button>
+        <button><a href="#">Sign&nbsp;Up</a></button>
+        <button><a hreg ="#">Log&nbsp;Out</a></button>
+      </ul>
+    </div>
+  </nav>
+
+<div id="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Clients</a>
+<a href="#">Contact</a>
+</div>
+
+<span class = "sideBar" onclick="openNav()"><div class ="sideMenu"><i class="fa fa-angle-right"></i></div> </span>
+
+ <div class = "mainContent1"> 
+  <h1 style = "color:White">Meet the Members of Mental Bunnies!</h1>
+</div>
+ <div class = "mainContentBio">
+  <div class = "testing1"> <h1 >Hello World</h1></div>
+  <div class = "testing2"><h2>What the</h2></div>
+  <div class = "testing3"><h3>Nevermind</h3></div>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.body.style.backgroundColor = "grey";
+  document.getElementsByClassName("navBar").style.backgroundColor = "grey";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.body.style.backgroundColor = "white";
+}   document.getElementsByClassName("navBar").style.backgroundColor = "white";
+</script>
+</body></html>

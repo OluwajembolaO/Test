@@ -1,0 +1,39 @@
+body{
+    animation: animateBg 20s linear infinite;
+    background-image: linear-gradient(45deg,#01626e,#ade8f0,#01626e,#ade8f0);
+    background-size: 100% 400%;
+  }
+  @keyframes animateBg {
+    0% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  .mainContent{
+z-index: -1;
+position:relative;
+top:120px;
+}
+.mainConetentBio{
+  border-style: solid;
+  border-width: 3px;
+  flex:1;
+  height:100;
+  width:100;
+}
+.mainContent1{
+    text-align:center;
+    font-size: 30;
+}  
+.mainConetentBio{
+  position:relative;
+  height:500;
+  width:500;
+}
+.testing1{
+  position:absolute;
+}
+.testing2{
+  position:absolute;
+}
+.testing3{
+  position:absolute;
+}

@@ -1,0 +1,41 @@
+.main{
+    position: relative;
+    text-align:center;
+    top: 50%;
+
+}
+.Username{
+    position:absolute;
+    font-size:19;
+    border-radius: 10px;
+    font-family: Lato;
+    text-align: center;
+
+}
+.Password{
+    position:absolute;
+    font-size:19;
+    border-radius: 10px;
+    font-family: Lato;
+    text-align: center;
+}
+.TOD {
+ position:relative;
+ display:block;
+ left:50%;
+}
+.signingInForm{
+    display:inline-block;
+    position:relative;
+    text-align: center;
+    top:50%;
+    left:40%;
+    height:400px;
+    border-style:solid;
+    border-width:1px;
+    border-radius: 20px;
+}
+.submit{
+    background-color:black;
+    color:white;
+}

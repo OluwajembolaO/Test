@@ -1,0 +1,19 @@
+
+.signUpOption{
+    position: relative;
+    text-align: center;
+    top: 50%;
+
+}
+.Username{
+    font-size:19;
+    border-radius: 10px;
+    font-family: Lato;
+
+}
+.Password{
+    font-size:19;
+    border-radius: 10px;
+    font-family: Lato;
+
+}

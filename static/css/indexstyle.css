@@ -1,0 +1,35 @@
+#main{
+    position:relative;
+    display:inline-block;
+    z-index: -1;
+    top: 100px;
+    height:700px;
+    font-weight: bold;
+    font-size:25px;
+    width:100%;
+    opacity: 0.8;
+    
+}
+
+#main{
+    background-image: url('../images/SubsistuteForNow.jpg');
+}
+.mainCatchPhrase{
+    position: relative;
+    color:white;
+    font-size:60px;
+}
+#mainCatchPhrase{
+    display:inline-block;
+    position:relative;
+    top:275px;
+    left:45%;
+
+}
+#mainImg{
+    position:absolute;
+    left:200px;
+    top:100px;
+    opacity: 1;
+  }
+  
