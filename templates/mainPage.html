@@ -20,15 +20,15 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="{{ url_for('about') }}">About</a></li>
-          <li><a href="{{ url_for('contacts') }}">Contact</a></li>
           <li><a href="{{ url_for('chatBot') }}">ChatBot</a></li>
+          <li><a href="{{ url_for('contacts') }}">Contact</a></li>
           {% if session.username %}
-          <li id = "user">{{ session.username }}</li>
-          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          <li id = "user">{{ session.username|capitalize}}</li>
+          <button><a href="{{ url_for('logout') }}">Log&nbsp;Out</a></button>
         {% else %}
-          <button><a href="{{ url_for('signIn') }}">Sign In</a></button>
-          <button><a href="{{ url_for('signUp') }}">Sign Up</a></button>
-          <button><a href="{{ url_for('logout') }}">Log Out</a></buttton>
+          <button><a href="{{ url_for('signIn') }}">Sign&nbsp;In</a></button>
+          <button><a href="{{ url_for('signUp') }}">Sign&nbsp;Up</a></button>
+          <button><a href="{{ url_for('logout') }}">Log&nbsp;Out</a></button>
         {% endif %}
         </ul>
       </div>
@@ -41,7 +41,6 @@
   <a href ="#">Partnerships</a>
   <a href="#">Testomonies</a>
 </div>
-
 <span class = "sideBar" onclick="openNav()"><div class ="sideMenu"><i class="fa fa-angle-right"></i></div> </span>
 
 

@@ -41,6 +41,9 @@
 </div>
 <span class = "sideBar" onclick="openNav()"><div class ="sideMenu"><i class="fa fa-angle-right"></i></div> </span>
 <div class = "signingInForm">
+  <h1 style = "font-family:montserrat; font-size:38px;">Sign In</h1>
+  <hr style = " border-top: 2px solid lightblue;"/>
+  <br/>
 <form method="POST">
   <label class = "Username" for="username">Username</label>
   <input class = "Username" type="text" id="username" name="username" required>
@@ -54,6 +57,9 @@
   <br/>
   <br/>
   <br/>
+  {%if error %}
+    <p style = "color:red;">{{ error }}</p>
+  {%endif %}
   <button class = "submit" type="submit">Sign In</button>
 </div>
   <script>

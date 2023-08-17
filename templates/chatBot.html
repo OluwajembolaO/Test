@@ -1,21 +1,60 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>OpenAI Quickstart</title>
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='dog.png') }}"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/chatBot.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
-  <h3>Name my pet</h3>
-  <form action="/chatBot" method="post">
-    <input type="text" name="animal" placeholder="Enter an animal" required />
-    <input type="submit" value="Generate names" />
-  </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
+  <div class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <div class="chat-header">
+       <h1> Bo the Bunny<h1> </div>
+      {% for message in messages %}
+        {% if message.sender == 'user' %}
+          <div class="message user">{{ message.text }}</div>
+        {% else %}
+          <div class="message bot">
+            <img class="profile-picture" src="{{ url_for('static', filename='images/Bobo2.svg') }}" alt="AI Profile">
+            <span class="bot-text">{{ message.text }}</span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <form action="/chatBot" method="post">
+      <input type="text" name="user_input" id="user_input" placeholder="Type your message..." required />
+      <button type="button" id="voiceInputButton">
+        <img style = "width:19px; height:19px;" src="{{ url_for('static', filename='images/mic-logo-icon-png-svg.png') }}" alt="Microphone">
+      </button>
+      <input style ="text-align:center;" type="submit" value="Send" />
+    </form>
+  </div>
+
+  <script>
+    const voiceInputButton = document.getElementById("voiceInputButton");
+    const userInputField = document.getElementById("user_input");
+
+    voiceInputButton.addEventListener("click", function() {
+      enableVoiceInput();
+    });
+
+    function enableVoiceInput() {
+      const recognition = new webkitSpeechRecognition() || SpeechRecognition();
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(event) {
+        const userVoiceInput = event.results[0][0].transcript;
+        userInputField.value = userVoiceInput; // Set voice input to the text field
+      };
+
+      recognition.onerror = function(event) {
+        console.error("Voice recognition error:", event.error);
+      };
+    }
+  </script>
 </body>
+</html>

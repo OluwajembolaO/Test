@@ -1,66 +1,80 @@
-@font-face {
-    font-family: "ColfaxAI";
-    src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
-        format("woff2"),
-      url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "ColfaxAI";
-    src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
-      url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
-    font-weight: bold;
-    font-style: normal;
-  }
-  body,
-  input {
-    font-size: 16px;
-    line-height: 24px;
-    color: #353740;
-    font-family: "ColfaxAI", Helvetica, sans-serif;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-  }
-  .icon {
-    width: 34px;
-  }
-  h3 {
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: bold;
-    color: #202123;
-    margin: 16px 0 40px;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-  }
-  input[type="text"] {
-    padding: 12px 16px;
-    border: 1px solid #10a37f;
-    border-radius: 4px;
-    margin-bottom: 24px;
-  }
-  ::placeholder {
-    color: #8e8ea0;
-    opacity: 1;
-  }
-  input[type="submit"] {
-    padding: 12px 0;
-    color: #fff;
-    background-color: #10a37f;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .result {
-    font-weight: bold;
-    margin-top: 40px;
-  }
+body {
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  background: url('../images/bg.jpg');
+}
+.chat-box {
+  max-height: 750px; /* Adjust the value as needed */
+  overflow-y: auto;
+  /* Add other styles as needed */
+}
+.chat-header {
+  background-color: #f0f0f0; /* Adjust the color as needed */
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: -10px;
+  z-index: 1;
+}
+
+.chat-container {
+  height:750px;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px; /* Border radius for the chat container */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 10px; /* Border radius for the chat messages */
+  max-width: 70%;
+}
+
+.user {
+  background-color: #e3f3de;
+  color: #4CAF50;
+  align-self: flex-end;
+}
+
+
+
+.bot {
+  display: flex; /* Allow items inside the div to be flexed */
+  background-color: #eff7fb;
+  color: #1e3a8a;
+  align-self: flex-start;
+  text-align: left; /* Align AI messages to the left */
+}
+
+/* Style for the profile picture */
+.profile-picture {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.bot-text {
+  display: flex;
+  flex-direction: column;
+}
+
+
